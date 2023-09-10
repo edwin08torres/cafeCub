@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handjet:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONTS -->
+
+    <title>Coffe Shot</title>
+  </head>
+  <body>
+    <section class="banner">
+      <div class="top">
+        <header class="header">
+          <div class="fas fa-bars" id="menu-btn"></div>
+          <nav class="nav">
+            <div class="logo">
+              <p>LOGO</p>
+            </div>
+            <ul>
+              <li><a href="#">Reseña</a></li>
+              <li><a href="#">Nosotros</a></li>
+              <li><a href="#">Menu</a></li>
+            </ul>
+          </nav>
+        </header>
+        <div class="icono-car">
+          <i class="fa-solid fa-cart-shopping" id="menu-carrito"></i>
+          <div class="notificacion">0</div>
+        </div>
+      </div>
+      <div class="content">
+        <h1>Ofreciendo El mejor Café de su Tierra!</h1>
+        <div class="btn">
+          <a href="#lista-producto">Mostrar menu</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="carrito">
+      <table id="lista-carrito">
+        <thead>
+          <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="vaciar_carrito">Vaciar Carrito</button>
+    </div>
+
+    <section class="info">
+      <div class="left">
+        <h2>Descubre el mejor Café</h2>
+        <p>
+          "Coffe shop" es una cafetería que te ofrece café de calidad que
+          impulsa tu productividad y mejora tu estado de ánimo. Tomar una taza
+          de café es bueno, pero tomar una taza de café auténtico es aún mejor.
+          No hay duda de que disfrutarás de este café más que cualquier otro que
+          hayas probado antes.
+        </p>
+        <div class="btn"><a href="#">Saber Más</a></div>
+      </div>
+      <div class="right">
+        <img src="img/coffee_mini.png" alt="" />
+      </div>
+    </section>
+
+    <main class="productos" id="lista-producto">
+      <div class="titulo">
+        <h2>Disfruta un nuevo sabor de café</h2>
+        <p>
+          Explora todos los sabores con nosotros, Acá siempre encontraras una
+          experiencia de sabores distintos
+        </p>
+      </div>
+      <section class="container_card">
+        <div class="card">
+          <div class="img">
+            <img src="img/cafe_!.jpg" alt="cafe" />
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <div class="content">
+            <div class="descripcion">
+              <h3>Cappucino</h3>
+              <span>with chocolate</span>
+            </div>
+            <div class="price">
+              <p>$4.53</p>
+              <div class="detail" data-id="1">
+                <i class="fa-regular fa-eye"></i>
+                <i class="fa-solid fa-cart-plus add"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img">
+            <img src="img/cafe_3.jpg" alt="cafe" />
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <div class="content">
+            <div class="descripcion">
+              <h3>Cappucino</h3>
+              <span>with chocolate</span>
+            </div>
+            <div class="price">
+              <p>$4.53</p>
+              <div class="detail" data-id="2">
+                <i class="fa-regular fa-eye"></i>
+                <i class="fa-solid fa-cart-plus add"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img">
+            <img src="img/Cafe_2.jpg" alt="cafe" />
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <div class="content">
+            <div class="descripcion">
+              <h3>Cappucino</h3>
+              <span>with chocolate</span>
+            </div>
+            <div class="price">
+              <p>$4.53</p>
+              <div class="detail" data-id="3">
+                <i class="fa-regular fa-eye"></i>
+                <i class="fa-solid fa-cart-plus add"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img">
+            <img src="img/Cafe_4.jpg" alt="cafe" />
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <div class="content">
+            <div class="descripcion">
+              <h3>Cappucino</h3>
+              <span>with chocolate</span>
+            </div>
+            <div class="price">
+              <p>$4.53</p>
+              <div class="detail" data-id="3">
+                <i class="fa-regular fa-eye"></i>
+                <i class="fa-solid fa-cart-plus add"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <a class="ver" href="#">Ver Más</a>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

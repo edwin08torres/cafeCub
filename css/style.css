@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+
+/* Banner inicia por acá */
+
+.banner {
+    height: 100%;
+    background: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, .8)),
+        url('/img/banner.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 3rem 1fr;
+    width: 100%;
+}
+
+.banner .top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 9px;
+
+}
+
+.banner .top .icono-car .notificacion {
+    position: absolute;
+    background: #fbc583;
+    color: #000;
+    width: .9rem;
+    height: .9rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    top: 5px;
+    right: 3px;
+
+}
+
+.banner .top .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.banner .top .header #menu-btn {
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.banner .top .header .nav {
+    background: #fff;
+    height: 94%;
+    left: -1000px;
+    position: absolute;
+    top: 4rem;
+    width: 12rem;
+    transition: transform .9s ease, left .9s ease;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0 10px 0 0;
+}
+
+.banner .top .header .nav.active {
+    left: 0;
+}
+
+.banner .top .header .nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap: 6rem;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    z-index: 1;
+}
+
+.banner .top .nav ul li {
+    width: 8rem;
+    height: 3rem;
+    box-shadow: 0px 10px 10px #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.banner .top .header .nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Azeret Mono', monospace;
+    font-size: 1.2rem;
+}
+
+.banner .top .icono-car {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .top .icono-car i {
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+@media(width >=1024px) {
+
+    .banner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .banner .top {
+        width: 80%;
+        align-self: center;
+        margin-top: 5px;
+    }
+
+    .banner .top .icono-car .notificacion {
+        right: calc(10rem - 10rem);
+        top: -5px;
+    }
+
+    .banner .top .header #menu-btn {
+        display: none;
+    }
+
+    .banner .top .header {
+        background-color: transparent;
+        height: 94%;
+        left: 0px;
+        width: 100%;
+        justify-content: start;
+    }
+
+    .banner .top .header .nav {
+        left: 0;
+        position: static;
+        flex-direction: row;
+        background-color: transparent;
+    }
+
+    .banner .top .header .nav .logo p {
+        color: #Fff;
+    }
+
+    .banner .top .header .nav ul {
+        flex-direction: row;
+        gap: 4rem;
+        /* background-color: transparent; */
+    }
+
+    .banner .top .header .nav ul li {
+        box-shadow: none;
+        border-bottom: .1px solid #ccc;
+        transition: border-bottom .4s ease-in;
+        height: 1.8rem;
+    }
+
+    .banner .top .header .nav ul li:hover {
+        border-bottom: .1px solid #ffb355;
+    }
+
+    .banner .top .header .nav ul li a {
+        color: #fff;
+        transition: color .4s ease-in;
+    }
+
+    .banner .top .header .nav ul li a:hover {
+        color: #fbc583;
+    }
+
+    .banner .top .header .nav.active {
+        left: 0;
+    }
+
+    .banner .content {
+        align-content: center;
+        height: 100%;
+    }
+
+
+}
+
+.carrito {
+    position: fixed;
+    top: 3rem;
+    right: -150%;
+    background-color: #fff;
+    width: 30rem;
+    min-height: 15rem;
+    transform: translateX(0);
+    transition: opacity .9s ease, visibility .9s ease, right .7s ease-in-out;
+    z-index: 2;
+}
+
+.carrito.active {
+    /* right: 0; */
+    display: none;
+}
+
+.carrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: .5rem 0 0 1rem;
+}
+
+.carrito #lista-carrito {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.carrito #lista-carrito thead tr {
+    display: flex;
+    gap: 2.2rem;
+}
+
+.carrito #vaciar_carrito {
+    background-color: #fbc583;
+    color: #000;
+    border: 0;
+    width: 8rem;
+    height: 2.5rem;
+    margin: 3% 5%;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Handjet', cursive;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.carrito #lista-carrito tbody td {
+    padding: 2% 0;
+}
+
+.carrito #lista-carrito tbody td img {
+    padding: 0% 10%;
+    border-radius: 25%;
+}
+
+.carrito #lista-carrito tbody tr {
+    display: flex;
+    gap: 1.9rem;
+    align-items: center;
+}
+
+.carrito #lista-carrito tbody tr td button {
+    align-items: flex-end;
+    font-size: 1rem;
+    color: red;
+    border: none;
+    background-color: transparent;
+}
+
+.carrito #lista-carrito tbody tr .cantidad {
+    margin-left: 1.5rem;
+}
+
+
+.banner .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .content h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Azeret Mono', monospace;
+    font-weight: 400;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    color: #fff;
+    width: 80%;
+}
+
+.banner .content .btn {
+    height: 3rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.banner .content .btn a {
+    background-color: #fbc583;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Handjet', cursive;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    width: 9rem;
+    height: 100%;
+}
+
+@media(width >=1024px) {
+    .banner .top .header .nav.active {
+        display: none;
+    }
+}
+
+@media(width >=768px) {
+    .carrito.active {
+        right: 0;
+        display: flex;
+    }
+
+    .banner .content h1 {
+        width: 30rem;
+        font-size: 2.5rem;
+    }
+
+    .carrito table thead tr {
+        border-bottom: .1px solid #ccc;
+    }
+}
+
+/* BANNER TERMINA ACÁ */
+
+
+/* INFO COMIENZA ACÁ */
+
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    margin-top: 5rem;
+    padding: 5%;
+}
+
+.info .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
+}
+
+.info h2 {
+    font-size: 1.4rem;
+    color: #603809;
+    font-family: 'Azeret Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.info p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-family: 'Handjet', cursive;
+    line-height: 1.5;
+}
+
+.info .btn a {
+    background-color: #fbc583;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Handjet', cursive;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    width: 8rem;
+    height: 3rem;
+}
+
+.info .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info .right img {
+    object-fit: contain;
+}
+
+@media(width >=768px) {
+    .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 32rem;
+
+    }
+
+    .info .left {
+        gap: 1.2rem;
+        justify-content: space-evenly;
+    }
+
+    .info h2 {
+        font-size: 2rem;
+    }
+
+    .info p {
+        font-size: 1.6rem;
+    }
+}
+
+
+@media(width >=1024px) {
+    .info {
+        justify-items: center;
+    }
+
+    .info .left {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info .right {
+        width: 80%;
+    }
+}
+
+/* INFO TERMINA ACÁ */
+
+/* CARDS COMIENZA ACÁ */
+
+.productos {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.productos .titulo {
+    text-align: center;
+}
+
+.productos .titulo h2 {
+    font-size: 1.4rem;
+    color: #603809;
+    font-family: 'Azeret Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+
+.productos .titulo p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-family: 'Handjet', cursive;
+    line-height: 1.5;
+}
+
+.productos .container_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.productos .container_card .card .img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 16rem;
+    width: 14rem;
+}
+
+.productos .container_card .card .img img {
+    height: 16rem;
+    width: 14rem;
+    border-radius: 5%;
+}
+
+.productos .container_card .card .img .star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(5, 7, 12, 0.2), rgba(5, 7, 12, 0.3));
+    border-radius: 0px 0px 10px 0px;
+}
+
+.productos .container_card .card .img .star i {
+    color: #ffb355;
+}
+
+.productos .container_card .card .content {
+    padding: 3%;
+    height: 8rem;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 7px 7px #ccc;
+}
+
+.productos .container_card .card .content .descripcion h3 {
+    font-size: 1.2rem;
+    color: #603809;
+    font-family: 'Azeret Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.productos .container_card .card .content .descripcion span {
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Handjet', cursive;
+    letter-spacing: .1rem;
+}
+
+.productos .container_card .card .content .price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productos .container_card .card .content .price p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: 'Azeret Mono', monospace;
+}
+
+.productos .container_card .card .content .price .detail {
+    width: 4rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.productos .container_card .card .content .price .detail i {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.productos .container_card .card .content .price .detail i:nth-child(1) {
+    color: #603809;
+}
+
+.productos .container_card .card .content .price .detail i:nth-child(2) {
+    color: #603809;
+}
+
+.productos .ver {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5rem;
+    width: 8rem;
+    text-align: center;
+    align-self: center;
+    box-shadow: 0px 10px 1.5rem #ccc;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+@media(width >=768px) {
+
+    .productos .container_card {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
+    }
+
+    .productos .container_card .card {
+        width: 14rem;
+    }
+
+    .productos {
+        align-items: center;
+
+    }
+
+    .productos .titulo {
+        width: 80%;
+    }
+
+    .productos .titulo h2 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .productos .titulo p {
+        font-size: 1.5rem;
+        letter-spacing: .1rem;
+    }
+
+}
+
+/* CARDS TERMINA ACÁ */
