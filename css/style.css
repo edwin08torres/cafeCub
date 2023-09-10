@@ -104,7 +104,7 @@ h6 {
     background: #fff;
     height: 94%;
     left: -1000px;
-    position: absolute;
+    position: fixed;
     top: 4rem;
     width: 12rem;
     transition: transform .9s ease, left .9s ease;
