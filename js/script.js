@@ -101,14 +101,16 @@ function carritoHTML() {
     const row = document.createElement("tr");
     row.innerHTML = `
       <td>
-        <img src="${img}" width="50">
+        <img src="${img}">
       </td>
       <td>${titulo}</td>
       <td>${descripcion}</td>
       <td>${precio}</td>
       <td class="cantidad">${cantidad}</td>
-      <td>
+      <td class="accion">
         <button href="#" class="borrar-curso fa-solid fa-trash"  data-id="${id}">
+        </button>
+        <button href="#" class="eye fa-regular fa-eye">
         </button>
       </td>
     `;
