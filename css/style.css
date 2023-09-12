@@ -91,7 +91,6 @@ h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .banner .top .header #menu-btn {
@@ -102,17 +101,17 @@ h6 {
 
 .banner .top .header .nav {
     background: #fff;
-    height: 94%;
+    min-height: 92vh;
     left: -1000px;
-    position: fixed;
+    position: absolute;
     top: 4rem;
     width: 12rem;
     transition: transform .9s ease, left .9s ease;
     display: flex;
-    gap: 4rem;
-    align-items: center;
     flex-direction: column;
     border-radius: 0 10px 0 0;
+    gap: 8rem;
+    align-items: center;
 }
 
 .banner .top .header .nav.active {
@@ -169,14 +168,14 @@ h6 {
     }
 
     .banner .top {
-        width: 80%;
+        width: 100%;
         align-self: center;
         margin-top: 5px;
     }
 
     .banner .top .icono-car .notificacion {
-        right: calc(10rem - 10rem);
-        top: -5px;
+        right: calc(10rem - 9.8rem);
+        top: 4px;
     }
 
     .banner .top .header #menu-btn {
@@ -188,13 +187,16 @@ h6 {
         height: 94%;
         left: 0px;
         width: 100%;
-        justify-content: start;
+        justify-content: center;
     }
 
     .banner .top .header .nav {
-        left: 0;
         position: static;
         flex-direction: row;
+        width: 80%;
+        min-height:3rem;
+        align-items: center;
+        justify-content: space-around;
         background-color: transparent;
     }
 
@@ -205,14 +207,17 @@ h6 {
     .banner .top .header .nav ul {
         flex-direction: row;
         gap: 4rem;
-        /* background-color: transparent; */
+        justify-content: center;
+        margin-right: 8rem;
     }
 
+    
     .banner .top .header .nav ul li {
         box-shadow: none;
         border-bottom: .1px solid #ccc;
         transition: border-bottom .4s ease-in;
         height: 1.8rem;
+        width: auto;
     }
 
     .banner .top .header .nav ul li:hover {

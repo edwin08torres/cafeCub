@@ -81,8 +81,22 @@ function leerDatosProductos(producto) {
       }
     });
     productoCarrito = [...productos];
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Producto agregado exitosamente",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   } else {
     productoCarrito = [...productoCarrito, infoProducto];
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Producto agregado exitosamente",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   }
 
   console.log(productoCarrito);
