@@ -1036,7 +1036,7 @@ h6 {
     text-align: center;
 }
 
-.footer .fondo .negocio nav li {
+.footer .fondo .negocio nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1054,7 +1054,7 @@ h6 {
     cursor: pointer;
 }
 
-.footer .fondo .contacto {
+.footer .fondo .contacto nav ul{
     width: 80%;
     display: flex;
     align-items: center;
