@@ -922,13 +922,13 @@ h6 {
 
 .footer {
     background: linear-gradient(to bottom right, #391e01 50%, #351a00 50%);
-    min-height: 100%;
     position: relative;
+    border: 2px solid red;
 }
 
 .footer .fondo {
-    /* position: relative; */
-    min-height: 100%;
+    border: 2px solid red;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
