@@ -54,7 +54,7 @@ h6 {
 .banner {
     height: 100%;
     background: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, .8)),
-        url('/img/banner_optimized.jpg') no-repeat;
+        url('/img/banner_optimized_optimized.jpg') no-repeat;
     background-position: center;
     background-size: cover;
     display: grid;
@@ -785,7 +785,7 @@ h6 {
     flex-direction: column;
     align-items: center;
     background: linear-gradient(#8e4c0672, #60360988),
-        url('/img/rsz_rsz_1rectangle14_optimized.png') no-repeat;
+        url('/img/rsz_rsz_1rectangle14_optimized_optimized.png') no-repeat;
     background-position: right bottom;
     background-size: cover;
     background-attachment: scroll
@@ -919,7 +919,7 @@ h6 {
     align-items: center;
     justify-content: center;
     background: linear-gradient(to top, #45240294, #381e02),
-        url('/img/rsz_fotter_image_optimized.png') no-repeat;
+        url('/img/rsz_fotter_image_optimized_optimized.png') no-repeat;
     background-position: right bottom;
     background-size: cover;
     gap: 1.4rem;
