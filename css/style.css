@@ -194,7 +194,7 @@ h6 {
         position: static;
         flex-direction: row;
         width: 80%;
-        min-height:3rem;
+        min-height: 3rem;
         align-items: center;
         justify-content: space-around;
         background-color: transparent;
@@ -211,7 +211,7 @@ h6 {
         margin-right: 8rem;
     }
 
-    
+
     .banner .top .header .nav ul li {
         box-shadow: none;
         border-bottom: .1px solid #ccc;
@@ -688,3 +688,201 @@ h6 {
 }
 
 /* CARDS TERMINA ACÁ */
+
+
+/* CARDS DE DIFERENCI EMPIEZA ACÁ */
+
+.diferencia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 5em;
+}
+
+.diferencia .titulo {
+    text-align: center;
+    width: 80%;
+}
+
+.diferencia .titulo h2 {
+    font-size: 1.4rem;
+    color: #603809;
+    font-family: 'Azeret Mono', monospace;
+    text-transform: uppercase;
+}
+
+.diferencia .titulo p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #603809;
+    font-family: 'Handjet', cursive;
+}
+
+.diferencia .container-card {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.diferencia .container-card .card {
+    max-width: 16rem;
+    min-height: 16rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+    background-color: #f9c06a21;
+    padding: 2%;
+    text-align: center;
+    border-radius: 7px;
+    border: #000 .1px solid;
+}
+
+.diferencia .container-card .card .detail h3 {
+    font-family: 'Azeret Mono', monospace;
+}
+
+.diferencia .container-card .card .descripcion p {
+    font-family: 'Handjet', cursive;
+}
+
+.diferencia .container-card .card:nth-child(1) {
+    background-color: #f9c06a70;
+}
+
+.diferencia .mensaje {
+    width: 70%;
+    margin-bottom: 4rem;
+}
+
+.diferencia .mensaje h3 {
+    color: #603809;
+    font-family: 'Azeret Mono', monospace;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+/* CARDS DE DIFERENCIA TERMINA ACÁ */
+
+/* PROMOCIÓN EMPIEZA ACÁ */
+
+.promocion {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(#8e4c0672, #60360988),
+        url('/img/Rectangle14.png') no-repeat;
+    background-position: right bottom;
+    background-size: cover;
+    background-attachment: fixed
+}
+
+.promocion .left {
+    min-height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.4rem;
+    width: 80%;
+    z-index: 2;
+}
+
+.promocion .left h2 {
+    font-size: 1.4rem;
+    color: #fbc583;
+    font-family: 'Azeret Mono', monospace;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.promocion .left p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'Handjet', cursive;
+    letter-spacing: .1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.promocion .left a {
+    background-color: #fbc583;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Handjet', cursive;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    width: 9rem;
+    height: 2.5rem;
+}
+
+.promocion .right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.promocion .right .cup {
+    min-height: 30rem;
+    max-height: 50rem;
+    height: 100%;
+}
+
+.promocion .right .beans {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    filter: blur(1px);
+}
+
+@media(width >=768px) {
+    .promocion .left h2 {
+        font-size: 2rem;
+    }
+
+    .promocion .left p {
+        font-size: 1.5rem;
+    }
+
+    .promocion .left a {
+        font-size: 1.3rem;
+        width: 10rem;
+        height: 2.8rem;
+    }
+
+    @media(width >=1024px) {
+        .promocion {
+            flex-direction: row;
+            height: 65%;
+            background-attachment: local;
+        }
+
+        .promocion .right {
+            height: 100%;
+        }
+
+        .promocion .right .beans {
+            bottom: auto;
+            height: 100%;
+        }
+    }
+}
+
+/* PROMOCIÓN TERMINA ACÁ */
