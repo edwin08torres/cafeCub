@@ -54,7 +54,7 @@ h6 {
 .banner {
     height: 100%;
     background: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, .8)),
-        url('/img/banner.jpg') no-repeat;
+        url('/img/rsz_banner.jpg') no-repeat;
     background-position: center;
     background-size: cover;
     display: grid;
@@ -769,6 +769,11 @@ h6 {
     font-size: 1.3rem;
 }
 
+.diferencia .container-card .card .img img{
+    width: 5.5rem;
+    height: 5.5rem;
+}
+
 /* CARDS DE DIFERENCIA TERMINA ACÁ */
 
 /* PROMOCIÓN EMPIEZA ACÁ */
@@ -779,7 +784,7 @@ h6 {
     flex-direction: column;
     align-items: center;
     background: linear-gradient(#8e4c0672, #60360988),
-        url('/img/Rectangle14.png') no-repeat;
+        url('/img/rsz_1rectangle14.png') no-repeat;
     background-position: right bottom;
     background-size: cover;
     background-attachment: scroll
@@ -837,6 +842,7 @@ h6 {
     align-items: center;
     flex-direction: column;
     width: 100%;
+    height: 100%;
 }
 
 .promocion .right .cup {
@@ -850,37 +856,17 @@ h6 {
     position: absolute;
     bottom: 0;
     right: 0;
+    height: 100%;
 }
 
-@media(width <=1023px) and (height <=1000px) {
-    .promocion .right .cup {
-        top: 0;
-
-    }
-
+@media(width <=768px) {
     .promocion .right .beans {
-        top: -90px;
+        position: absolute;
+        bottom: 0px;
         right: 0;
     }
 }
 
-@media(width <=425px) and (height <=1000px) {
-    .promocion .right .beans {
-        top: calc(20rem - 17rem);
-    }
-}
-
-@media(width <=375px) and (height <=1000px) {
-    .promocion .right .beans {
-        top: calc(20rem - 14rem);
-    }
-}
-
-@media(width <=320px) and (height <=1000px) {
-    .promocion .right .beans {
-        top: calc(20rem - 10rem);
-    }
-}
 
 @media(width >=768px) {
     .promocion .left h2 {
@@ -932,7 +918,7 @@ h6 {
     align-items: center;
     justify-content: center;
     background: linear-gradient(to top, #45240294, #381e02),
-        url('/img/fotter_image.png') no-repeat;
+        url('/img/rsz_fotter_image.png') no-repeat;
     background-position: right bottom;
     background-size: cover;
     gap: 1.4rem;
@@ -1054,13 +1040,16 @@ h6 {
     cursor: pointer;
 }
 
-.footer .fondo .contacto nav ul{
+.footer .fondo .contacto nav ul {
     width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     /* margin-bottom: 2rem; */
+}
+
+.footer .fondo .contacto nav ul li {
     z-index: 100;
 }
 
@@ -1091,12 +1080,13 @@ h6 {
 
 .cub-left {
     position: absolute;
-    top: -6rem;
+    top: -2rem;
     left: 0;
 }
 
 .cub-left img {
-    width: 12rem;
+    width: 8rem;
+    height: 9.7rem;
 }
 
 .cub-right {
@@ -1107,10 +1097,11 @@ h6 {
 
 .cub-right img {
     width: 10rem;
+    height: 9.7rem;
 }
 
-@media(width<= 375px){
-    .footer .fondo .contacto nav li span{
+@media(width<=375px) {
+    .footer .fondo .contacto nav li span {
         color: #ffb355;
         font-weight: 700;
     }
