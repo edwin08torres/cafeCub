@@ -773,7 +773,7 @@ h6 {
     font-size: 1.3rem;
 }
 
-.diferencia .container-card .card .img img{
+.diferencia .container-card .card .img img {
     width: 5.5rem;
     height: 5.5rem;
 }
@@ -795,7 +795,7 @@ h6 {
 }
 
 .promocion .left {
-    min-height: 40%;
+    min-height: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -858,8 +858,8 @@ h6 {
 
 .promocion .right .beans {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    /* bottom: 0; */
+    /* right: 0; */
     height: 100%;
 }
 
@@ -888,6 +888,15 @@ h6 {
     }
 }
 
+@media(width <=1024px) {
+    .promocion .right .beans {
+        bottom: auto;
+        height: 100%;
+        right: 0;
+    }
+
+}
+
 @media(width >=1024px) {
     .promocion {
         flex-direction: row;
@@ -902,6 +911,7 @@ h6 {
     .promocion .right .beans {
         bottom: auto;
         height: 100%;
+        right: 0;
     }
 }
 
