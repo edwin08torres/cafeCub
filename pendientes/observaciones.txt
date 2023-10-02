@@ -1,0 +1,2 @@
+luego de darle click mostra un modal donde ingrese la cantidad deseada, y por ultimo mostrar 
+el mensaje de exito.

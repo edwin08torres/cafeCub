@@ -9,8 +9,8 @@
     para disfrutar de café de alta calidad."
     />
 
-    <link rel="preload" href="/css/style.css" as="style" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preload" href="./css/style.css" as="style" />
+    <link rel="stylesheet" href="./css/style.css" />
 
     <link
       rel="stylesheet"
@@ -97,7 +97,7 @@
     </section>
 
     <main class="productos" id="lista-producto">
-      <div class="titulo">
+      <div class="titulo" id="titulo">
         <h2>Disfruta un nuevo sabor de café</h2>
         <p>
           Explora todos los sabores con nosotros, Acá siempre encontraras una
@@ -211,6 +211,20 @@
         </div>
       </section>
       <a class="ver" href="#">Ver Más</a>
+
+
+
+      <div class="modal" id="modal">
+        <div class="contenido-modal">
+          <h2>Seleccionar Cantidad</h2>
+          <input type="number" id="cantidadProducto" min="1" value="" />
+          <div class="btn">
+            <button class="adds" id="btnAgregarCarrito">Agregar al Carrito</button>
+            <button id="cancelar">Cancelar</button>
+          </div>
+          <p id="mensajeError" class="error"></p>
+        </div>
+      </div>
     </main>
 
     <section class="diferencia" id="resenha">
@@ -360,6 +374,6 @@
       src="https://kit.fontawesome.com/610c201c1f.js"
       crossorigin="anonymous"
     ></script>
-    <script src="js/script.js" defer></script>
+    <script src="./js/script.js" defer></script>
   </body>
 </html>
